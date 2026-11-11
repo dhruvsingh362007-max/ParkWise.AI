@@ -148,22 +148,7 @@ export const DriverDashboard = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-2 border-b border-slate-200/80">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-black text-navy-900 tracking-tight">Driver Portal</h1>
-            <span
-              className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold border ${
-                error
-                  ? 'bg-rose-50 text-rose-700 border-rose-200'
-                  : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-              }`}
-              title={error ? error : 'Driver profile synchronized with SQLite backend'}
-            >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${
-                  error ? 'bg-rose-500' : 'bg-emerald-500 animate-pulse'
-                }`}
-              />
-              {error ? 'Offline Cache' : 'Live SQLite Driver Record'}
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight">Driver Portal</h1>
           </div>
 
           <p className="text-xs text-slate-500 mt-0.5">
@@ -334,11 +319,10 @@ export const DriverDashboard = () => {
                 <button
                   key={tab}
                   onClick={() => setStatusFilter(tab)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
-                    statusFilter === tab
-                      ? 'bg-blue-600 text-white shadow-xs font-bold'
-                      : 'text-slate-600 hover:bg-slate-100'
-                  }`}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${statusFilter === tab
+                    ? 'bg-blue-600 text-white shadow-xs font-bold'
+                    : 'text-slate-600 hover:bg-slate-100'
+                    }`}
                 >
                   {tab === 'ALL' ? 'All Records' : tab}
                 </button>
@@ -380,16 +364,16 @@ export const DriverDashboard = () => {
         {/* Table */}
         {!loading && (
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
+            <table className="w-full text-left text-xs min-w-[760px]">
               <thead className="bg-slate-50/80 text-slate-500 uppercase tracking-wider text-[10px] font-bold border-b border-slate-100">
                 <tr>
-                  <th className="px-5 py-3">Citation ID</th>
-                  <th className="px-5 py-3">Violation Type & Location</th>
-                  <th className="px-5 py-3">Vehicle Plate</th>
-                  <th className="px-5 py-3">Date</th>
-                  <th className="px-5 py-3">Fine Amount</th>
-                  <th className="px-5 py-3">Status</th>
-                  <th className="px-5 py-3 text-right">Actions</th>
+                  <th className="px-5 py-3 whitespace-nowrap min-w-[170px]">Citation ID</th>
+                  <th className="px-5 py-3 min-w-[200px]">Violation Type & Location</th>
+                  <th className="px-5 py-3 whitespace-nowrap">Vehicle Plate</th>
+                  <th className="px-5 py-3 whitespace-nowrap">Date</th>
+                  <th className="px-5 py-3 whitespace-nowrap">Fine Amount</th>
+                  <th className="px-5 py-3 whitespace-nowrap">Status</th>
+                  <th className="px-5 py-3 text-right whitespace-nowrap">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -412,7 +396,7 @@ export const DriverDashboard = () => {
 
                     return (
                       <tr key={v.id} className="hover:bg-slate-50/80 transition-colors group">
-                        <td className="px-5 py-3.5 font-mono font-bold text-navy-900">
+                        <td className="px-5 py-3.5 font-mono font-bold text-navy-900 whitespace-nowrap">
                           {v.id}
                         </td>
 

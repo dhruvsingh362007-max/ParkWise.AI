@@ -218,11 +218,7 @@ export const AdminDashboard = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-2 border-b border-slate-200/80">
         <div>
           <div className="flex items-center gap-2.5">
-            <h1 className="text-2xl font-black text-navy-900 tracking-tight">Municipal Admin Console</h1>
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Live SQLite Connected
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight">Municipal Admin Console</h1>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Adjudicating Officer: <span className="font-bold text-slate-800">Inspector Rakesh Verma (IN-TC-402)</span> • Zone:{' '}
@@ -405,16 +401,16 @@ export const AdminDashboard = () => {
 
             {/* Citations Table */}
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
+              <table className="w-full text-left text-xs min-w-[760px]">
                 <thead className="bg-slate-50/80 text-slate-500 uppercase tracking-wider text-[10px] font-bold border-b border-slate-100">
                   <tr>
-                    <th className="px-4 py-3">Citation ID</th>
-                    <th className="px-4 py-3">Vehicle Plate</th>
+                    <th className="px-4 py-3 whitespace-nowrap min-w-[170px]">Citation ID</th>
+                    <th className="px-4 py-3 whitespace-nowrap">Vehicle Plate</th>
                     <th className="px-4 py-3">Violation Type</th>
                     <th className="px-4 py-3">Location</th>
-                    <th className="px-4 py-3">Penalty</th>
-                    <th className="px-4 py-3">Status</th>
-                    <th className="px-4 py-3 text-right">Adjudication Action</th>
+                    <th className="px-4 py-3 whitespace-nowrap">Penalty</th>
+                    <th className="px-4 py-3 whitespace-nowrap">Status</th>
+                    <th className="px-4 py-3 text-right whitespace-nowrap">Adjudication Action</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -436,7 +432,7 @@ export const AdminDashboard = () => {
                   ) : (
                     filteredViolations.map((v) => (
                       <tr key={v.id} className="hover:bg-slate-50/80 transition-colors">
-                        <td className="px-4 py-3.5 font-mono font-bold text-navy-900">{v.id}</td>
+                        <td className="px-4 py-3.5 font-mono font-bold text-navy-900 whitespace-nowrap">{v.id}</td>
                         <td className="px-4 py-3.5 font-mono font-semibold text-slate-700">{v.vehiclePlate}</td>
                         <td className="px-4 py-3.5 font-medium text-slate-800">{v.type}</td>
                         <td className="px-4 py-3.5 text-slate-500 max-w-xs truncate">{v.location}</td>

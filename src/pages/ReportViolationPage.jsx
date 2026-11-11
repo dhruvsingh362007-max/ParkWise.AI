@@ -124,11 +124,7 @@ export const ReportViolationPage = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-2 border-b border-slate-200/80">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-black text-navy-900 tracking-tight">Report Violation</h1>
-            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Live SQLite Incident Log
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight">Report Violation</h1>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Submit observed parking non-compliance for optical OCR pre-scan and mock GPS verification saved to SQLite.

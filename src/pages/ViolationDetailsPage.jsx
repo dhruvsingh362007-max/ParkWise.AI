@@ -97,7 +97,7 @@ export const ViolationDetailsPage = () => {
             <span className="text-xs text-slate-400 font-mono">Issued {v.issueDate}</span>
           </div>
 
-          <h1 className="text-2xl font-black text-navy-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight">
             {v.type}
           </h1>
 

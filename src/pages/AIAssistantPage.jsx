@@ -298,26 +298,7 @@ In our demonstration compliance framework:
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-2 border-b border-slate-200/80">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-black text-navy-900 tracking-tight">AI Assistant</h1>
-            <span
-              className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold border ${
-                aiStatus?.configured
-                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                  : 'bg-blue-50 text-blue-700 border-blue-200'
-              }`}
-              title={
-                aiStatus?.configured
-                  ? `Active Google Gemini Flash model: ${aiStatus.model}`
-                  : 'Operating in SQLite Grounded Database Mode'
-              }
-            >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${
-                  aiStatus?.configured ? 'bg-emerald-500 animate-pulse' : 'bg-blue-600 animate-pulse'
-                }`}
-              />
-              {aiStatus?.configured ? 'Gemini Flash Live' : 'RAG Database Mode'}
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight">AI Assistant</h1>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Explainable AI parking compliance guidance, grace period auditing and dispute reasoning.

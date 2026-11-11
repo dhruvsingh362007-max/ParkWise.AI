@@ -83,23 +83,7 @@ export const LandingPage = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-2 border-b border-slate-200/80">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-black text-navy-900 tracking-tight">Dashboard</h1>
-            {/* Live Backend Connection Indicator */}
-            <span
-              className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold border ${
-                error
-                  ? 'bg-rose-50 text-rose-700 border-rose-200'
-                  : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-              }`}
-              title={error ? error : 'Connected to Flask REST API at http://127.0.0.1:5000'}
-            >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${
-                  error ? 'bg-rose-500' : 'bg-emerald-500 animate-pulse'
-                }`}
-              />
-              {error ? 'Flask API Offline' : 'Live REST API Connected'}
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight">Dashboard</h1>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Real-time municipal parking compliance monitoring, automated violation ledger and explainable AI benchmarks.
